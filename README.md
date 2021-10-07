@@ -5,7 +5,9 @@ pythonmongorest.py is Code from https://www.bogotobogo.com/python/MongoDB_PyMong
 To run: In terminal
 $ python pythongmongorest.py
 If missing Module then run the following
-$ pip install flask
-$ pip install flask_restplus
-$ pip install flask_pymongo
+$ pip3 install flask
+$ pip3 install flask_restplus  #this is not needed as this version uses flask_restx
+$ pip3 install flask_restx
+$ pip3 install flask_pymongo
+
 
