@@ -1,6 +1,7 @@
 # mongorest.py
 from flask import Flask
-from flask_restplus import Api, Resource, fields
+#from flask_restplus import Api, Resource, fields #previous implementation
+from flask_restx import Api, Resource, fields
 # from werkzeug.utils import cached_property
 from flask import jsonify
 from flask import request
