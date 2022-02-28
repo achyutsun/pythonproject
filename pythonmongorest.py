@@ -1,8 +1,10 @@
 # mongorest.py
+# Please use Python 3.8.6 https://www.python.org/downloads/release/python-386/
+# Windows x86-64 executable installer: https://www.python.org/ftp/python/3.8.6/python-3.8.6-amd64.exe 
+# macOS 64-bit installer: https://www.python.org/ftp/python/3.8.6/python-3.8.6-macosx10.9.pkg
+# Linux Gzipped source tarball: https://www.python.org/ftp/python/3.8.6/Python-3.8.6.tgz
 from flask import Flask
-#from flask_restplus import Api, Resource, fields #previous implementation
 from flask_restx import Api, Resource, fields
-# from werkzeug.utils import cached_property
 from flask import jsonify
 from flask import request
 from flask_pymongo import PyMongo
@@ -11,7 +13,8 @@ app = Flask(__name__)
 api = Api(app)
 
 app.config['MONGO_DBName'] = 'stars'
-app.config['MONGO_URI'] = 'mongodb://localhost:27017/restdb'
+# Change the MONGO_URI with provided connection String in Canvas
+app.config['MONGO_URI'] = 'mongodb://userName:password@MongoDBServer_ProficedIn_Canvas:27017/database_name'
 mongo = PyMongo(app)
 
 @app.route('/star', methods=['GET'])
