@@ -35,5 +35,14 @@ def add_star():
     output = {'name': new_star['name'], 'distance': new_star['distance']}
     return jsonify({'result' : output})
 
+// Updated function get_connection 10/7/2022
+def get_connection(self):
+    try:
+        client = MongoClient(MongoDbConnection.CONNECTION_STR)
+        db = client.restdb
+        return db
+    except Exception as e:
+        print(e)
+
 if __name__ == "__main__":
     app.run(debug=True)
