@@ -8,6 +8,7 @@ from flask_restx import Api, Resource, fields
 from flask import jsonify
 from flask import request
 from flask_pymongo import PyMongo
+from pymongo import MongoClient
 
 app = Flask(__name__)
 api = Api(app)
